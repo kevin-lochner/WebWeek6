@@ -11,7 +11,7 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery &copy; <a href="https://www.mapbox.com/">Mapbox</a>',
     maxZoom: 7,
     id: 'mapbox.streets',
-    accessToken: 'pk.eyJ1Ijoia2xvY2huZXIiLCJhIjoiY2s2bGg0ZW1lMDNxdDNxcGgxcHA3cXc5OCJ9.uJSahvjdbwopXFPk4_AYTA',
+    accessToken: 'pk.eyJ1Ijoia2xvY2huZXIiLCJhIjoiY2s2bGd6dzdwMGYwZTNkdTlmcXVqZnp1aCJ9.LMsObgXWY4-37POUFY9Vdg',
 }).addTo(map);
 
 let icon = L.icon({
