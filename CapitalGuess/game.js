@@ -30,7 +30,7 @@ let countryIndex = newCountry()
 submitButton.addEventListener('click', function () {
     let answer = userAnswerElement.value
     // Create url based on country code
-    let url = `http://api.worldbank.org/v2/country/${countriesAndCodes[countryIndex]['alpha-2']}?format=json`
+    let url = `https://api.worldbank.org/v2/country/${countriesAndCodes[countryIndex]['alpha-2']}?format=json`
     // Get the data for the country in question
     fetch(url)
         .then( res => res.json() )
