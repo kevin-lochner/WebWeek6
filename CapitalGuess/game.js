@@ -45,6 +45,7 @@ submitButton.addEventListener('click', function () {
         })
         .catch( err => {        // Error handling
             console.log(err)
+            resultTextElement.innerHTML = 'Sorry, the site is unable to access the capital right now.'
         })
 })
 
