@@ -15,17 +15,19 @@ console.log(countriesAndCodes)  // You don't need to log countriesAndCodes - jus
 // TODO when the page loads, select an element at random from the countriesAndCodes array
 // TODO display the country's name in the randomCountryElement
 
-newCountry()
-
-// Function
+// Function for new country
 function newCountry () {
     let countryIndex = Math.floor(Math.random()*countriesAndCodes.length)
-    let country =  countriesAndCodes[index].name
+    let country =  countriesAndCodes[countryIndex].name
     randomCountryElement.innerHTML = country
+    return countryIndex
 }
 
+// create the new country
+let countryIndex = newCountry()
+
 // When submit button is clicked
-submitButton.addEventListener('click', function (countryIndex) {
+submitButton.addEventListener('click', function () {
     let answer = userAnswerElement.value
     // Create url based on country code
     let url = `http://api.worldbank.org/v2/country/${countriesAndCodes[countryIndex]['alpha-2']}?format=json`
@@ -51,8 +53,8 @@ submitButton.addEventListener('click', function (countryIndex) {
 // When the replay button is clicked
 replayButton.addEventListener('click', function () {
     userAnswerElement.value = ''            // clear answer
-    resultTextElement.innerHTML = ''            // clear result
-    newCountry()
+    resultTextElement.innerHTML = ''        // clear result
+    countryIndex = newCountry()             // set a new country
 
 })
 
